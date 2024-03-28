@@ -1,0 +1,31 @@
+#:include gpsblinker.kv
+BoxLayout:
+	orientation:"vertical"
+	MDTopAppBar:
+		title:"Search Menu"
+		right_action_items:[["magnify",lambda x:app.finder.open()]]
+
+	FarmersMapView:
+		id:mapview
+		lat:-24.618707
+		lon:25.943467
+		zoom:10
+		on_zoom:
+			self.zoom=10 if self.zoom<10 else self.zoom
+		on_lon:
+			self.start_getting_markets_in_fov()
+		on_lat:
+			self.start_getting_markets_in_fov()
+		GpsBlinker:
+			source:"ddc.png"
+			id:my_blinker
+			default_blink_size:25
+			blink_size:25
+			canvas.before:
+				Color:
+					rgba:app.theme_cls.primary_color
+				RoundedRectangle:
+					radius:[self.blink_size/2.0,]
+					size:[self.blink_size,self.blink_size]
+					pos:self.pos[0]+self.size[0]/2.0-self.blink_size/2.0,self.pos[1]+self.size[1]/2.0-self.blink_size/2.0
+					

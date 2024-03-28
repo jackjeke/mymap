@@ -1,0 +1,17 @@
+Here Geocoder API Here Developer Projects
+
+
+yi3pflkQKYiZgEilQW8b App ID
+
+3ZQHy8U1DD2BY5PCYAr6X4dkIJfWCvqxE6jfKX4anpI API Key
+
+
+"https://geocoder.api.here.com/6.2/geocode.json?searchtext=Gaborone&app_id=yi3pflkQKYiZgEilQW8b&app_code=3ZQHy8U1DD2BY5PCYAr6X4dkIJfWCvqxE6jfKX4anpI"
+
+
+https://geocode.search.hereapi.com/v1/geocode
+?q=240+Washington+St.%2C+Boston
+&limit=4
+&apiKey={YOUR_API_KEY}
+
+https://geocode.search.hereapi.com/v1/geocode?q={}&limit=4&apiKey={}

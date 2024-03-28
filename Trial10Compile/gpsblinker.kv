@@ -1,0 +1,13 @@
+<GpsBlinker>:
+ 
+	lat:root.lat
+	lon:root.lon
+	default_blink_size:25
+	blink_size:25
+	canvas.before:
+		Color:
+			rgba:app.theme_cls.primary_color
+		RoundedRectangle:
+			radius:[self.blink_size/2.0,]
+			size:[self.blink_size,self.blink_size]
+			pos:self.pos[0]+self.size[0]/2.0-self.blink_size/2.0,self.pos[1]+self.size[1]/2.0-self.blink_size/2.0
